@@ -2,6 +2,7 @@
 #define Grid_h
 #include <SFML/Graphics.hpp>
 #include <vector>
+
 using namespace sf;
 using namespace std;
 
@@ -9,12 +10,12 @@ class Grid
 {
 private:
     vector<vector<int>> tablero;
-    int rows, cols;
+    int rows, cols, w, h;
 
 public:
-    Grid(int rows, int cols);
-
-    void drawTo(RenderWindow  &window);
+    Grid (int rows, int cols);
+    Grid (int n, int w, int h);
+    void drawTo(RenderWindow &window);
 };
 
 #endif
