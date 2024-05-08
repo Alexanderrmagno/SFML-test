@@ -9,6 +9,7 @@ class Grid
 {
 private:
     vector<vector<int>> tablero;
+    vector<vector<int>> siguente;
     int rows, cols, w, h;
 
 public:

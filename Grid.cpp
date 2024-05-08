@@ -12,7 +12,10 @@ Grid::Grid(int rows, int cols)
             tablero[i].push_back(0);
         }
     }
+
+this-> siguente = vector<vector<int>>(rows, vector<int>(cols, 0));
 }
+
 Grid::Grid(int n, int w, int h)
 {
     this->rows = n;
@@ -44,7 +47,7 @@ void Grid::drawTo(RenderWindow &window)
             rect.setOutlineColor(Color::Black);
             if (tablero[j][i] == 1)
             {
-                rect.setFillColor(Color::Green);
+                rect.setFillColor(Color::Black);
             }
             window.draw(rect);
         }
