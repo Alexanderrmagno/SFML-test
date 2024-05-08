@@ -9,7 +9,7 @@ class Grid
 {
 private:
     vector<vector<int>> tablero;
-    vector<vector<int>> siguente;
+    vector<vector<int>> siguiente;
     int rows, cols, w, h;
 
 public:
@@ -17,7 +17,9 @@ public:
     Grid(int rows, int cols);
 
     void drawTo(RenderWindow  &window);
+    void update();
     void toggle(int x,int y);
+    int calcularVecinos(int i, int j);
 };
 
 #endif
